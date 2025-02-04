@@ -375,7 +375,8 @@ main {
   font-size: 38px;
   line-height: 1.5;
   font-weight: 700;
-  margin-top: 0px;
+  margin-top: 20px;
+  
 }
 .container #c_introduction #c_wrap #c_intro_text .into_Title::after {
   content: "";
