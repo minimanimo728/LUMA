@@ -1,0 +1,220 @@
+body {
+    /* 웹사이트에 폰트 적용 */
+    font-family:'Paperlogy';
+    
+
+} 
+
+a{display:inline-block; text-decoration:none; color:inherit;}
+//속성값(inherit) : 부모요소에 설정된 값과 동일하게 설정한다
+//텍스트관련한 스타일 대부분의 기본값
+
+$main_color:#ffc070;
+$sub_color:#4D4D4D;
+
+header{
+	position:fixed; width:100%; height: 80px; color:#4D4D4D;
+	z-index:100; background-color: #fff;
+	.inner{padding:0 25px;}
+	a:hover{color:#FFC070;}
+	#logo{
+		margin:13px 0 0 0; position: absolute; left: 50px; 
+		img{width:70px;}
+		}//end:#logo
+}//end:#header
+
+#CS{position: fixed; background-color: #fff; width: 600px; display: none;
+	height: 800px; z-index: 999; top: 54%; left: 50%; transform: translate(-50%, -50%);
+	padding:60px 65px 0 65px;}
+#CS .CS_logo{float: left;}
+#CS .CS_logo img{width: 100px;}
+#CS .remove{float: right; position: absolute; right: 0; top: 0;}
+#CS .remove img{width: 30px; height: 30px;}
+h2{margin-bottom: 30px; font-size: 30px;}
+.design li{display: inline-block;}
+.design{margin-bottom: 30px;}
+.design span{vertical-align:-2px; display: inline-block; padding-left: 1px;}
+#CS.active{display: block;} 
+#CS .remove{float: right;}
+#CS .h1{display: inline-block;}
+h3{margin-bottom: 5px; font-size: 20px;}
+.file ul li{font-size:13px;}
+.contents li{font-size:13px;}
+.contents .file{width: 50%; margin-bottom: 10px; text-align: left;}
+.contents .file ul{display: flex;  justify-content: flex-start; gap: 96px;}
+.contents .file ul:last-child li{width: 177px;}
+.agree span{font-size: 12px; height: 32px;}
+.check_wrap p{padding-left: 24px;}
+
+#CS_inner{padding-left: 75px;}
+
+label {
+	font-size: 14px;
+	line-height: 2rem;
+  }
+  [type="radio"], span {
+	vertical-align: middle;
+  }
+  [type="radio"] {
+	appearance: none;
+	border: max(2px, 0.1em) solid gray;
+	border-radius: 50%;
+	width: 1.5em;
+	height: 1.5em;
+	transition: border 0.2s ease-in-out;
+  }
+  [type="radio"]:checked {
+	border: 0.4em solid #FFC070;
+  }
+[type="radio"]:hover {
+	box-shadow: 0 0 0 max(2px, 0.2em) lightgray;
+	cursor: pointer;
+  }
+[type="radio"]:hover + span {
+	cursor: pointer;
+  }
+
+
+
+
+  [type="checkbox"]:focus-visible {
+	outline: max(2px, 0.1em) dotted #FFC070;
+	outline-offset: max(2px, 0.1em);
+  }
+  [type="checkbox"]:checked {
+	border: 0.4em solid #FFC070;
+  }
+
+  input[type="checkbox"]{
+	display:none;
+	}
+  
+  input[type="checkbox"] + label{
+	cursor:pointer;
+   }
+  
+  input[type="checkbox"] + label > span{
+	vertical-align: middle;
+	padding-left: 5px;
+   }
+  
+  /* label:before에 체크하기 전 상태 CSS */
+  input[type="checkbox"] + label:before{
+	content:"";
+	display:inline-block;
+	width:10px;
+	height:10px;
+	border:2px solid #FFC070;
+	border-radius: 4px;
+	vertical-align:middle;
+	}
+	
+  /* label:before에 체크 된 상태 CSS */  
+  input[type="checkbox"]:checked + label:before{
+	content:"";
+	background-color:#FFC070;
+	border-color:#FFC070;
+	background-image: url('../images/check_btn.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	}
+
+	.btn_p{text-align: center;}
+	.button {
+		background: linear-gradient(#FFC070, #FF8F00);
+		border: none;
+		color: white;
+		padding: 8px 40px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 12px;
+		margin: 4px 2px;
+		cursor: pointer;
+	  }
+
+      #gnb{text-align: center;
+        li{display: inline-block; margin:0px 0; padding: 0 28px;}
+        ul:first-child{margin-left: 0px;}
+        ul:last-child{margin-right: 0px;}
+        a{font-weight:bold;}
+        li:last-child{position: relative;}
+        li:last-child:hover .sub{display: inline-block;}
+        >ul>li>a{text-decoration: none; color: $sub_color; display: inline-block;
+          transition: transform 0.3s ease; padding: 35px 0;} 
+        a:hover{color:$main_color;  transform: translateY(3px);}
+        .sub {background: #4d4d4ddd;  padding: 10px 10px; position: absolute;top: 80px;right: 0px;
+             /*outline: 3px solid #000;*/  display:none ;}
+     
+        .sub li a{text-decoration: none; color: $main_color; display: inline-block;
+            transition: transform 0.3s ease; padding: 15px 0;}
+        .sub li::before,
+        .sub li::after {
+            content: none;  /* 콘텐츠 제거 */
+            display: none;   /* 가상 요소 숨기기 */
+}
+    }//end:#gnb
+    
+    #sns{position: absolute; top: 23px; right: 50px; align-items: center;
+        li{display: inline-block; margin: 0 2.5px;}
+        
+        li:nth-child(4){vertical-align: 2px;}
+        li:nth-child(1){vertical-align: 9px; padding-right: 5px;}
+        a{font-size: 32px; line-height: 32px;}
+        
+        .sc{font-size: 29px;}
+        .CS_btn{border: 2px solid #000; height: 14px; 
+            line-height: 14px; border-radius: 12px; padding: 5px 5px;
+            font-size: 16px;}
+        .CS_btn:hover{border-color: #FFC070; background-color: #FFC070;
+                      color: #fff;}
+    }//end:#sns
+
+#portfolio{
+    display: flex; justify-content: center; align-items: center;
+    background: #fff; height: 100vh;
+    #p_wrap{width:75%; height:70%; color: #000;
+        display: flex; justify-content: center; align-items: center;
+        flex-direction: column; 
+        h1{text-align: center; font-size: 40px; margin: 0.3em 0 0.7em 0; color: $main_color;}
+        h2{color: $sub_color;}
+        }
+   
+
+    .tab_menu{display: flex; justify-content: center; margin-bottom: 20px; width: 50%; }
+    .tab_menu li{width: 25%; text-align: center;}
+   
+    
+    .tab_menu a{display: block; font-size: 16px; color: #000; text-decoration: none;
+    padding: 0.5em 0.5em; line-height: 1.5em;  border-bottom: 3px solid #ccc ;
+    transition: all 0.2s ease-in-out;}
+    .tab_menu a:hover,
+    .tab_menu a.active{border-bottom: 3px solid $main_color; color: $main_color; }
+
+    .tab_contents{padding-top: 10px; display: flex; flex-wrap: wrap; gap: 40px; 
+        height: 75%; width: 100%; position: relative;
+        article{width: 100%;  height: 100%; visibility: hidden; position: absolute; 
+                opacity: 0;  transform: translateY(20px);
+                transition: opacity 0.3s ease, transform 0.3s ease; 
+            ul{display: flex; justify-content: space-between; flex-wrap: wrap;}
+            li{width:50%; height: 600px; background: #444; position: relative;
+              }
+            li img{width:100%; height: 100%; }
+            li .tab_text{ position: absolute;
+                top: 0; left: 0;    
+                width: 100%; height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                line-height: 30px; background: #0007; color: #fff;font-size: 1.1em;
+                opacity: 0;
+                        } 
+            li:hover .tab_text{opacity: 1; transition: all 1s;}
+        }
+        article.active{visibility: visible;
+                        opacity: 1;
+                        transform: translateY(0);}
+            
+    }
+}
